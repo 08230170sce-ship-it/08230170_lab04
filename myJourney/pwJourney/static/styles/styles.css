@@ -1,0 +1,58 @@
+:root {
+--bg: #f4f7fb;
+--card: #ffffff;
+--accent: #3b82f6;
+--muted: #6b7280;
+}
+
+
+* { box-sizing: border-box; }
+body {
+font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+margin: 0;
+background: var(--bg);
+color: #111;
+}
+
+
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background: var(--card);
+box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.logo {
+font-weight: 700;
+color: var(--accent);
+text-decoration: none;
+}
+.nav-list {
+list-style: none;
+display: flex;
+gap: 1rem;
+margin: 0;
+padding: 0;
+}
+.nav-list a {
+text-decoration: none;
+color: var(--muted);
+}
+
+
+.hero, .about {
+max-width: 800px;
+margin: 2rem auto;
+background: var(--card);
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+text-align: center;
+}
+footer {
+text-align: center;
+color: var(--muted);
+padding: 1rem;
+margin-top: 2rem;
+}

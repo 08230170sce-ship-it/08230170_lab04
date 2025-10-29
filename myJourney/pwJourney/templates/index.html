@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="{% url 'pwJourney:index' %}" class="logo">myJourney</a>
+            <ul class="nav-list">
+                <li><a href="{% url 'pwJourney:index' %}">Home</a></li>
+                <li><a href="{% url 'pwJourney:about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="{% static 'images/pema.jpg' %}" alt="Pema Wangchuk">
+        <h1>{{ greeting }}</h1>
+        <p>
+            My education journey has never been just about books, grades, or classrooms it's been about growth, discovery, and resilience. From the early days when I was still figuring out who I wanted to be, to now where every lesson shapes my future, I have come a long way.
+        </p>
+        <p>
+            There were times when things felt uncertain when I doubted my abilities or questioned if I was moving in the right direction. But every challenge I faced taught me something deeper than what any textbook could. I learned the value of patience, discipline, and consistency.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 myJourney</p>
+    </footer>
+</body>
+
+</html>

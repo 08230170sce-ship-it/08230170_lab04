@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="{% url 'pwJourney:index' %}" class="logo">myJourney</a>
+            <ul class="nav-list">
+                <li><a href="{% url 'pwJourney:index' %}">Home</a></li>
+                <li><a href="{% url 'pwJourney:about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p><strong>Name: Pema Wangchuk </strong> {{ name }}</p>
+        <p>{{ bio }}</p>
+        <p> I am Pema Wangchuk, an IT student passionate about technology, creativity, and personal growth. My journey is driven by curiosity to learn, build, and explore how digital innovation can make a real difference. Beyond academics, I value perseverance, self-improvement, and using every challenge as a step toward becoming better each day.</p>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 myJourney</p>
+    </footer>
+</body>
+
+</html>
